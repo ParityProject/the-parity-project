@@ -4,116 +4,184 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Parity Project | Policy Translation & Speechwriting Desk</title>
-    <!-- Tailwind CSS CDN for rapid, rock-solid styling -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&display=swap" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        serif: ['Merriweather', 'serif'],
-                    },
-                }
+    <style>
+        body {
+            background-color: #f7f6f2;
+            color: #1a1a1a;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 48px 0;
+            border-bottom: 1px solid #d4d4d8;
+        }
+        nav a {
+            margin-left: 24px;
+            text-decoration: none;
+            color: #3f3f46;
+            font-weight: 500;
+            font-size: 14px;
+        }
+        nav a:hover {
+            color: #18181b;
+        }
+        h1, h2, h3, h4 {
+            font-family: Georgia, serif;
+        }
+        .hero {
+            padding: 64px 0;
+        }
+        .hero h2 {
+            font-size: 40px;
+            line-height: 1.2;
+            margin-bottom: 24px;
+        }
+        .hero p {
+            font-size: 18px;
+            color: #3f3f46;
+            max-width: 650px;
+        }
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            padding: 48px 0;
+            border-top: 1px solid #d4d4d8;
+        }
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            padding: 32px 0;
+        }
+        .card {
+            background: #ffffff;
+            border: 1px solid #e4e4e7;
+            padding: 24px;
+        }
+        .card h4 {
+            margin-top: 0;
+            margin-bottom: 12px;
+        }
+        .card p {
+            margin: 0;
+            font-size: 14px;
+            color: #52525b;
+        }
+        .section {
+            padding: 48px 0;
+            border-top: 1px solid #d4d4d8;
+        }
+        .btn {
+            display: inline-block;
+            background: #18181b;
+            color: #ffffff;
+            padding: 12px 24px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            border-radius: 2px;
+        }
+        .btn:hover {
+            background: #27272a;
+        }
+        footer {
+            padding: 32px 0;
+            border-top: 1px solid #d4d4d8;
+            font-size: 12px;
+            color: #71717a;
+            display: flex;
+            justify-content: space-between;
+        }
+        .label {
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            color: #71717a;
+            display: block;
+            margin-bottom: 8px;
+        }
+        @media (max-width: 768px) {
+            .grid-2, .grid-3 {
+                grid-template-columns: 1fr;
             }
         }
-    </script>
+    </style>
 </head>
-<body class="bg-[#f7f6f2] text-[#1a1a1a] font-sans antialiased selection:bg-[#1a1a1a] selection:text-[#f7f6f2]">
-
-    <!-- Header / Nav -->
-    <header class="max-w-4xl mx-auto px-6 py-12 flex justify-between items-center border-b border-zinc-300">
-        <div>
-            <span class="text-xs font-semibold tracking-widest uppercase text-zinc-600 block mb-1">Research & Advocacy Desk</span>
-            <h1 class="text-2xl font-serif font-bold tracking-tight text-zinc-900">The Parity Project</h1>
-        </div>
-        <nav class="space-x-6 text-sm font-medium text-zinc-700">
-            <a href="#mandate" class="hover:text-zinc-900 transition-colors">Mandate</a>
-            <a href="#services" class="hover:text-zinc-900 transition-colors">Services</a>
-            <a href="#contact" class="hover:text-zinc-900 transition-colors">Contact</a>
-        </nav>
-    </header>
-
-    <!-- Main Content Container -->
-    <main class="max-w-4xl mx-auto px-6 py-16 space-y-24">
-
-        <!-- Hero Section -->
-        <section class="space-y-6">
-            <h2 class="text-4xl sm:text-5xl font-serif font-bold tracking-tight text-zinc-900 leading-[1.15]">
-                Translating structural policy for working producers.
-            </h2>
-            <p class="text-xl font-serif text-zinc-700 leading-relaxed max-w-2xl">
-                Bridging the gap between rigorous economic reform and rural reality. We strip away technocratic jargon to build messaging that speaks the language of the ground floor.
-            </p>
-        </section>
-
-        <!-- The Mandate -->
-        <section id="mandate" class="grid sm:grid-cols-2 gap-12 pt-12 border-t border-zinc-300">
-            <div class="space-y-4">
-                <h3 class="text-xs font-semibold tracking-widest uppercase text-zinc-500">The Problem</h3>
-                <p class="text-zinc-800 leading-relaxed font-sans">
-                    Modern economic policy is trapped in a coastal, academic dialect. When structural solutions—public credit, anti-monopoly enforcement, infrastructure logistics—get dressed up in ivory-tower terminology, they sound like an alien threat to working people who live off the land and labor with their hands. 
-                </p>
-            </div>
-            <div class="space-y-4">
-                <h3 class="text-xs font-semibold tracking-widest uppercase text-zinc-500">The Intervention</h3>
-                <p class="text-zinc-800 leading-relaxed font-sans">
-                    The Parity Project acts as a translation engine. We look at the fundamental economic axis—<strong>producers versus extractors</strong>—and rewrite complex policy mechanics into sharp, native idioms that resonate across traditional political divides.
-                </p>
-            </div>
-        </section>
-
-        <!-- Services -->
-        <section id="services" class="space-y-8 pt-12 border-t border-zinc-300">
+<body>
+    <div class="container">
+        <header>
             <div>
-                <span class="text-xs font-semibold tracking-widest uppercase text-zinc-500 block mb-2">Core Capabilities</span>
-                <h3 class="text-2xl font-serif font-bold text-zinc-900">A solo-led desk built for high-impact prose.</h3>
+                <span class="label">Research & Advocacy Desk</span>
+                <h1 style="margin:0; font-size: 24px;">The Parity Project</h1>
             </div>
-            <div class="grid sm:grid-cols-3 gap-8">
-                <div class="space-y-2 p-6 bg-white border border-zinc-200 rounded-sm">
-                    <h4 class="font-bold text-zinc-900">Speechwriting</h4>
-                    <p class="text-sm text-zinc-600 leading-relaxed">
-                        Speeches, talking points, and floor remarks designed to be spoken out loud at county meetings, union halls, and public forums.
-                    </p>
+            <nav>
+                <a href="#mandate">Mandate</a>
+                <a href="#services">Services</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </header>
+
+        <main>
+            <section class="hero">
+                <h2>Translating structural policy for working producers.</h2>
+                <p>Bridging the gap between rigorous economic reform and rural reality. We strip away technocratic jargon to build messaging that speaks the language of the ground floor.</p>
+            </section>
+
+            <section id="mandate" class="grid-2">
+                <div>
+                    <span class="label">The Problem</span>
+                    <p style="color: #27272a;">Modern economic policy is trapped in a coastal, academic dialect. When structural solutions—public credit, anti-monopoly enforcement, infrastructure logistics—get dressed up in ivory-tower terminology, they sound like an alien threat to working people who live off the land and labor with their hands.</p>
                 </div>
-                <div class="space-y-2 p-6 bg-white border border-zinc-200 rounded-sm">
-                    <h4 class="font-bold text-zinc-900">Policy Translation</h4>
-                    <p class="text-sm text-zinc-600 leading-relaxed">
-                        Condensing heavy whitepapers and legislative proposals into actionable, vernacular advocacy materials that win trust.
-                    </p>
+                <div>
+                    <span class="label">The Intervention</span>
+                    <p style="color: #27272a;">The Parity Project acts as a translation engine. We look at the fundamental economic axis—<strong>producers versus extractors</strong>—and rewrite complex policy mechanics into sharp, native idioms that resonate across traditional political divides.</p>
                 </div>
-                <div class="space-y-2 p-6 bg-white border border-zinc-200 rounded-sm">
-                    <h4 class="font-bold text-zinc-900">Framing Memos</h4>
-                    <p class="text-sm text-zinc-600 leading-relaxed">
-                        Strategic briefs for organizers and campaigns looking to cut through culture-war static and center material economic reality.
-                    </p>
+            </section>
+
+            <section id="services" class="section">
+                <span class="label">Core Capabilities</span>
+                <h3 style="font-size: 24px; margin-top: 4px; margin-bottom: 24px;">A solo-led desk built for high-impact prose.</h3>
+                <div class="grid-3">
+                    <div class="card">
+                        <h4>Speechwriting</h4>
+                        <p>Speeches, talking points, and floor remarks designed to be spoken out loud at county meetings, union halls, and public forums.</p>
+                    </div>
+                    <div class="card">
+                        <h4>Policy Translation</h4>
+                        <p>Condensing heavy whitepapers and legislative proposals into actionable, vernacular advocacy materials that win trust.</p>
+                    </div>
+                    <div class="card">
+                        <h4>Framing Memos</h4>
+                        <p>Strategic briefs for organizers and campaigns looking to cut through culture-war static and center material economic reality.</p>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- Contact Section -->
-        <section id="contact" class="space-y-6 pt-12 border-t border-zinc-300 pb-16">
-            <h3 class="text-xs font-semibold tracking-widest uppercase text-zinc-500">Initiate Contact</h3>
-            <p class="text-lg font-serif text-zinc-800 max-w-xl">
-                To discuss speechwriting commissions, research briefs, or strategic framing engagements, reach out directly.
-            </p>
-            <div>
-                <a href="mailto:your-email@domain.com" class="inline-block bg-zinc-900 text-white font-medium px-6 py-3 rounded-sm hover:bg-zinc-800 transition-colors text-sm">
-                    Send an Inquiry
-                </a>
-            </div>
-        </section>
+            <section id="contact" class="section" style="padding-bottom: 64px;">
+                <span class="label">Initiate Contact</span>
+                <p style="font-size: 18px; font-family: Georgia, serif; color: #27272a; max-width: 600px;">To discuss speechwriting commissions, research briefs, or strategic framing engagements, reach out directly.</p>
+                <div style="margin-top: 24px;">
+                    <a href="mailto:contact@theparityproject.org" class="btn">Send an Inquiry</a>
+                </div>
+            </section>
+        </main>
 
-    </main>
-
-    <!-- Footer -->
-    <footer class="max-w-4xl mx-auto px-6 py-8 border-t border-zinc-300 text-xs text-zinc-500 flex justify-between items-center">
-        <p>&copy; 2026 The Parity Project. All rights reserved.</p>
-        <p>Grounded in Material Reality.</p>
-    </footer>
-
+        <footer>
+            <p>&copy; 2026 The Parity Project. All rights reserved.</p>
+            <p>Grounded in Material Reality.</p>
+        </footer>
+    </div>
 </body>
 </html>
